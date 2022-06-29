@@ -44,3 +44,15 @@ button {
     color:rgb(133, 24, 24);
 }
 
+.rate{
+    margin:100px 0 0 10px;
+}
+#inputRate{
+    border:1px solid #000;
+    border-radius: 2px;
+    padding:5px;
+}
+.rate label{
+    color: rgb(26, 212, 193);
+    font-size:20px;
+}

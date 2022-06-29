@@ -2,13 +2,30 @@ const CW = document.querySelector('[CW-input]');
 const LBP = document.querySelector(".LBPinner");
 const BW = document.querySelector(".BWinner")
 const buttons = [...document.querySelectorAll(".button")];
+const rateDOM = document.querySelector(".rate");
 function convertCW(){
+    var rate = document.getElementById('inputRate');
+    rate.addEventListener('input', event =>{
+        const input = event.target.value;    
+        rateValue.textContent = `Rate: ${input}`;
+   
+        localStorage.setItem("input", input);    
+        
+    });
+    const number = localStorage.getItem("input");
+const rateValue = document.querySelector('.current-rate');
+        console.log(rateValue)
+        rateValue.textContent = `Rate: ${number}`;
+
 CW.addEventListener('input', function(e) {
     const cw = e.target.value;
-    const LBPresult = cw * 60000;
+    const rate = localStorage.getItem("input");
+    const num = parseInt(rate);
+    const LBPresult = cw * num;
     const x = LBPresult.toLocaleString("en-US");
     const BWresult = cw * 1.6;
     const y = BWresult.toFixed(2);
+    
     BW.innerHTML = y;    
     LBP.innerHTML = x;
     buttons.forEach(button =>{
@@ -19,9 +36,12 @@ CW.addEventListener('input', function(e) {
         const finalResult = result.toLocaleString("en-US");
         console.log(result)
         LBP.innerHTML = finalResult ;
+        
+        
     });
-    });
+});
 });   
+
 
 }
 
