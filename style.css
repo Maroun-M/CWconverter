@@ -1,0 +1,46 @@
+*{
+    
+    margin:0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    background-color: rgb(243, 238, 238);
+}
+
+
+.converter{
+    border:1px solid rgba(114, 104, 104, 0.34);
+    border-radius:5px;
+    box-shadow: 2px 4px 4px 0.5px rgba(114, 104, 104, 0.34);
+    padding:40px;
+    margin:50px 10px;
+}
+
+.converter-container label{
+    color: rgb(26, 212, 193);
+    font-size:20px;
+}
+p{
+    color:rgb(168, 83, 168);
+    font-size:20px;
+}
+
+.baby-world{
+    text-align: center;
+    justify-content: center;
+    color:rgb(15, 164, 178)
+}
+#inputCW{
+    border:1px solid #000;
+    border-radius: 2px;
+    padding:5px;
+}
+
+button {
+    margin-right:10px;
+    margin-top:10px;
+    padding:3px;
+    border-radius: 5px;
+    color:rgb(133, 24, 24);
+}
+
