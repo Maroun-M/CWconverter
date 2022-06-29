@@ -18,7 +18,7 @@ CW.addEventListener('input', function(e) {
         const result = parseInt(x) * 1000 * (1 - newValue) ;
         const finalResult = result.toLocaleString("en-US");
         console.log(result)
-        LBP.innerHTML = finalResult;
+        LBP.innerHTML = finalResult ;
     });
     });
 });   
