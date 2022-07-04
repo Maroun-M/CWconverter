@@ -3,6 +3,7 @@ const LBP = document.querySelector(".LBPinner");
 const BW = document.querySelector(".BWinner")
 const buttons = [...document.querySelectorAll(".button")];
 const rateDOM = document.querySelector(".rate");
+const discountDOM = document.querySelector(".discountedInner")
 function convertCW(){
     var rate = document.getElementById('inputRate');
     rate.addEventListener('input', event =>{
@@ -31,11 +32,11 @@ CW.addEventListener('input', function(e) {
     buttons.forEach(button =>{
     button.addEventListener('click', event =>{
         const value = event.target.innerHTML.replace('%', '');
-        const newValue = value / 100;
-        const result = parseInt(x) * 1000 * (1 - newValue) ;
+        const newValue = value / 100;      
+        const result = LBPresult * (1 - newValue) ;
         const finalResult = result.toLocaleString("en-US");
-        console.log(result)
-        LBP.innerHTML = finalResult ;
+        discountDOM.innerHTML = finalResult ;
+    
         
         
     });
