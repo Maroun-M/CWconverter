@@ -41,6 +41,13 @@ CW.addEventListener('input', function(e) {
         
     });
 });
+    CW.addEventListener('keydown', event =>{
+        const key = event.key;
+        if (key === "Backspace"){
+            discountDOM.innerHTML = `0`
+        }
+    });
+
 });   
 
 
